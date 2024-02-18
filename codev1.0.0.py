@@ -2,6 +2,7 @@ from pathlib import Path
 import os
 import easygui
 import urllib.request
+from urllib.request import urlretrieve
 
 wersja = "b'1.0.0'"
 
@@ -75,3 +76,6 @@ if str(wersja) == str(aktualizacja):
             easygui.msgbox("Dziękujemy za skorzystanie z systemu makenosnn105")
 else:
     easygui.msgbox("Twój program wymaga aktualizacji!")
+    url = "https://maka12v.github.io/codev1.0.0.py"
+    filename = "codev1.0.0.py"
+    urlretrieve(url, filename)
