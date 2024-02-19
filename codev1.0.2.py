@@ -9,7 +9,7 @@ try:
     if wersja != "1.0.2":
         os.remove("codev" + wersja + ".py")
         easygui.msgbox("Aktualizacja zakonczona!")
-        easygui.msgbox("W folderze w ktorym miales poprzednia wersje programu powinienes spotkać nowa!")
+        easygui.msgbox("W folderze w ktorym miales poprzednia wersje programu powinienes spotkac nowa!")
         exit()
 except NameError:
     print("")
