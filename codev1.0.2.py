@@ -7,13 +7,12 @@ global wersja
 
 try:
     if wersja != "1.0.2":
-        print("Aktualizacja zakończona!")
-        print("W folderze w którym miałeś poprzednią wersje programu powinieneś spotkać nową!")
         os.remove("codev" + wersja + ".py")
+        easygui.msgbox("Aktualizacja zakonczona!")
+        easygui.msgbox("W folderze w ktorym miales poprzednia wersje programu powinienes spotkać nowa!")
+        exit()
 except NameError:
-    easygui.msgbox("Aktualizacja zakończona!")
-    easygui.msgbox("W folderze w którym miałeś poprzednią wersje programu powinieneś spotkać nową!")
-    exit()
+    print("")
 
 
 wersja = "1.0.2"
