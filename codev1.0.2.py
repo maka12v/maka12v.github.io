@@ -112,9 +112,6 @@ aktualizacja = str(aktu.read())
 if str(wersja) == str(aktualizacja):
     plik = Path("haslo.txt")
     if plik.is_file():
-        aktualizacja = aktualizacja.replace("b", "")
-        aktualizacja = aktualizacja.replace("'", "")
-        print()
         if logowanie() == 1:
             if menu() == 1:
                 easygui.msgbox("Dziękujemy za skorzystanie z systemu makenosnn105")
@@ -135,6 +132,8 @@ if str(wersja) == str(aktualizacja):
 else:
     easygui.msgbox("Twój program wymaga aktualizacji!")
     print("Trwa aktualizowanie....")
+    aktualizacja = aktualizacja.replace("b", "")
+    aktualizacja = aktualizacja.replace("'", "")
     url = "https://maka12v.github.io/codev" + str(aktualizacja) + ".py"
     filename = "codev" + str(aktualizacja) + ".py"
     urlretrieve(url, filename)
