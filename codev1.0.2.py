@@ -5,10 +5,11 @@ import urllib.request
 from urllib.request import urlretrieve
 
 if wersja != "1.0.2":
-    print("Aktualizacja zakończona")
+    print("Aktualizacja zakończona!")
+    print("W folderze w którym miałeś poprzednią wersje programu powinieneś spotkać nową!")
     os.remove("codev" + wersja + ".py")
 
-
+global wersja
 wersja = "1.0.2"
 
 def logowanie():
@@ -139,8 +140,7 @@ if str(wersja) == str(aktualizacja):
 else:
     easygui.msgbox("Twój program wymaga aktualizacji!")
     print("Trwa aktualizowanie....")
-    url = "https://maka12v.github.io/codev" + str(aktualizacja) + ".py"
-    filename = "codev" + str(aktualizacja) + ".py"
+    url = "https://maka12v.github.io/codev" + aktualizacja + ".py"
+    filename = "codev" + aktualizacja + ".py"
     urlretrieve(url, filename)
-    print("Aktualizacja zakończona")
-    exit()
+    exec(open("codev" + aktualizacja + ".py").read())
